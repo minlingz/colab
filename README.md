@@ -1,35 +1,39 @@
-## Hosted Notebooks
+# Cloud Hosted Notebooks
 
 
-![74328483-01c15980-4d5c-11ea-8f94-2f93f18fe863](https://github.com/nogibjj/hosted-notebooks-lab/assets/58792/5141311e-1b7f-4b8a-bc0f-97fc7652897e)
+## Getting Started
 
-* [Example notebook here](https://github.com/nogibjj/hosted-notebooks-lab/blob/main/Chapter7_data_science.ipynb)
+To get started with the project, you will need to have Python and the following Python libraries installed:
 
-**Action Items:**
+- pandas
+- numpy
+- matplotlib
 
-- Import a sample dataset into the cloud notebook (Ingest stage)
+You can install these libraries using pip or conda. You will also need to have software installed to run and execute a Jupyter Notebook.
 
-- Perform basic data inspection such as checking the number of rows and columns, data types, summary statistics etc (EDA stage) 
+## Running the Code
 
-- Filter the data based on specific criteria and create a new filtered dataset (EDA)
+To run the code, open the `exercise_merging.ipynb` notebook in Jupyter Notebook and follow the instructions for each exercise. The code is designed to be run in order, as each exercise builds on the previous one.
 
-- Group the data by one or more columns and aggregate metrics like mean, max etc (EDA)
+## Data Processing Steps
 
-- Join the main dataset with another supplementary dataset (EDA) 
+This project involves processing data using Python and the Pandas library. The data processing steps are as follows:
+
+
+- Ingest county-level data on arrests from California `ca`, county population data `ncp` into the cloud notebook (Ingest stage)
+
+- Perform basic data inspection such as checking the number of rows and columns, data types, summary statistics, etc. for dataset `ca`. (EDA stage) 
+
+- Group the `ncp` data by one or more columns and aggregate metrics like mean, max etc (EDA)
+
+- Identify and handle missing or erroneous data in the dataset `ncp` (EDA) 
+
+- Filter the data based on year and state, create new filtered dataset `ncp_ca_2009` (EDA)
+
+- Join the arrest dataset `ca` with population dataset `ncp_ca_2009`, creating new dataset `data_2009` (EDA) 
+
+- Generate new columns `violent_arrest_rate_2009` and `drug_arrest_rate_2009` with calculation in the dataset `data_2009` (EDA)
+
+- Follow similar steps for year 2018, creating new dataset `data_2018` (EDA)
 
 - Create various data visualizations like histograms, scatter plots, box plots etc (EDA)
-
-
-**Challenge Items:**
-
-- Identify and handle missing or erroneous data in the dataset (EDA) 
-
-- Perform advanced data transformations like normalization, binning, log transforms etc (EDA)
-
-- Implement interactive visualizations and sliders using libraries like plotly (EDA)
-
-- Train a simple machine learning model on the data like linear regression, random forest etc (Modeling stage)
-
-- Evaluate the trained model performance using accuracy metrics, confusion matrix etc (Modeling)
-
-- Summarize key data insights, visualizations and models in a report (Conclusion stage)
